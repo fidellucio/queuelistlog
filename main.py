@@ -32,7 +32,7 @@ def update_packing_google_sheets(csv_file_path):
         scope = ["https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
         creds = ServiceAccountCredentials.from_json_keyfile_name("hxh.json", scope)
         client = gspread.authorize(creds)
-        sheet1 = client.open_by_url("https://docs.google.com/spreadsheets/d/1qvgVViwnLVkzLnjfWQLU3m6ce0f3lXrvg-aq2YF59v8")
+        sheet1 = client.open_by_url("https://docs.google.com/spreadsheets/d/1972x2klrhArCt5qjo_ikJsF5cBwwTCFczP0lTzLgwmk")
         worksheet1 = sheet1.worksheet("queuelistlog")
         df = pd.read_csv(csv_file_path)
         df = df.fillna("")
